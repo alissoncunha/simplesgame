@@ -11,6 +11,10 @@ class Game extends Phaser.Game {
     public startGame() {
         this.state.start('main');
     }
+
+    public resizeGame() {
+        
+    }
 }
 
 const game = new Game();

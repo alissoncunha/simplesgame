@@ -1,6 +1,9 @@
 import { Simplinho } from '../models/simplinho';
 
 export class MainState extends Phaser.State {
+    
+    public simplinho: Phaser.Sprite;
+
     constructor() {
         super();
     }
@@ -10,4 +13,13 @@ export class MainState extends Phaser.State {
         this.game.load.image('simplinho', 'assets/imgs/simplinho.png');
     }
 
+    create() {
+        this.game.physics.startSystem(Phaser.Physics.ARCADE);       
+
+        this.simplinho = this.game.add.sprite(100, 245, 'simplinho');
+    }
+
+    update() {
+        
+    }
 }
